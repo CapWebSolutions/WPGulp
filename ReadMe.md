@@ -98,6 +98,9 @@ npm -v
 
 NodeJS and NPM are installed, now we need to install `Gulp` globally. To do that, run the following command
 ```bash
+# For Windows 10; run the following command
+> npm install gulp --global
+
 # For MAC OS X; run the following command with super user.
 sudo npm install --global gulp
 
@@ -106,9 +109,12 @@ npm install --global gulp
 ```
 
 ### → STEP #4: Installing Node Dependencies
-We are in the root folder of our WordPress plugin or WordPress theme at the moment, let's install the Node Dependencies. In the terminal run this command and wait for it to download all the NodeJS dependencies. It's a one time process and can take about 5 mins depending on the internet speed of your connection.
+We are in the root folder of our WordPress plugin or WordPress theme at the moment, let's install the Node Dependencies. At the command prompt run this command and wait for it to download all the NodeJS dependencies. It's a one time process and can take about 5 mins depending on the internet speed of your connection.  Expect to see some npm WARNings. 
 
 ```bash
+# For Windows 10; run the following command
+> npm install gulp --global
+
 # For MAC OS X run the following command with super user.
 sudo npm install
 
@@ -117,16 +123,23 @@ npm install
 ```
 
 ### → STEP #5: Just run `Gulp`
-Once the NodeJS dependencies are downloaded just run the following command to get up and running with WPGulp
+Once the NodeJS dependencies are downloaded just run the following command to get up and running with WPGulp. This starts a background task that watches, waits, whatever it is instructed to do in the gulpfile.js referenced. 
+
 ```bash
 # To start gulp
-gulp
+> gulp
+
+[18:09:04] Using gulpfile ~\Local Sites\newyosite\wp-content\themes\Genesis-Developers-Starter-Theme\gulpfile.js
+[18:09:04] Starting 'styles'...
+[18:09:04] Finished 'styles' after 19 ms
+
 
 # To stop gulp press CTRL (⌃) + C
 ```
 
 ### → Optional Step #6: Images and Translation
-To optimize images and generate WP POT translation file, you can run the following commands
+To optimize images and generate WP POT translation file, you can run the following commands. Note they execute once and exit; they do not run inthe background and wait:
+
 ```bash
 # To optimize images
 gulp images
@@ -137,8 +150,12 @@ gulp translate
 
 ## How to Update?
 1. Delete old files and download the latest [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files in the root of your WP project.
-2. Open your WordPress project (plugin/theme) root folder in the terminal and run
+2. Open your WordPress project (plugin/theme) root folder in the terminal and run Step 4 commands again: 
 ```bash
+
+# For Windows 10; run the following command
+> npm install gulp --global
+
 # For MAC OS X run the following command with super user.
 sudo npm install
 # For Linux run the following command.
